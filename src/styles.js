@@ -76,5 +76,30 @@ align-items: center;
 .buttonSeta{
     margin-left: 10px;
 }
+`
+export const User = styled.li`
+.containerCard{
+    display: flex;
+    flex-direction:row;
+    width: 300px;
+    height: 90px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 14px;
+    justify-content: space-between;
+    align-items: center;   
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    text-indent: 10px;
+}
+.containerCard button{
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-right: 7px;
+}
+
 
 `

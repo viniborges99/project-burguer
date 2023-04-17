@@ -4,14 +4,13 @@ import { Container, H1, Img, ContainerItens, Label, Input, Button } from './styl
 import logo from "../../assets/logo.png"
 import seta from "../../assets/seta.svg"
 import { v4 as uuid } from 'uuid';
-import {Link} from 'react-router-dom'
+import {useHistory} from 'react-router-dom'
 
 
 
 
 function App() {
-
-  //const users = []
+  const history = useHistory()
   const [users,setUsers]= useState([])
   const inputPedido=useRef()
   const inputName = useRef()
@@ -23,7 +22,7 @@ function App() {
     
     setUsers([ ...users,newUser])
 
-    
+    history.push('/usuarios')
     
   } 
 

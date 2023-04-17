@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react';
+import {useHistory} from 'react-router-dom'
 import axios from "axios"
 import { Container, H1, Img, ContainerItens, Button, User } from './styles';
 import pedido from "../../assets/pedido.png"
@@ -10,6 +11,7 @@ function Users() {
 
   //const users = []
   const [users,setUsers]= useState([])
+  const history = useHistory()
  
   useEffect(()=>{
     async function FetchUsers(){
@@ -26,6 +28,9 @@ function Users() {
     await axios.delete(`http://localhost:3001/users/${userId}`)
     const NewUser = users.filter(user => user.id !== userId)
     setUsers(NewUser)
+  }
+  function goBackPage(){
+    history.push('/')
   }
 
   
@@ -50,7 +55,7 @@ function Users() {
             </User>
           ))}
         </ul>
-        <Button to="/"><img className='buttonSeta' src={seta} alt="seta" />Voltar</Button>
+        <Button onClick={goBackPage} ><img className='buttonSeta' src={seta} alt="seta" />Voltar</Button>
       </ContainerItens>
     </Container>
   )

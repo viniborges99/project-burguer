@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import {Link} from 'react-router-dom'
+
 
 export const  Container = styled.div`
 background: #0A0A10;
@@ -33,7 +33,7 @@ export const ContainerItens = styled.div`
 `
 
 
-export const Button = styled(Link)`
+export const Button = styled.button`
 width: 312px;
 height: 68px;
 background: rgba(255, 255, 255, 0.14);
@@ -51,6 +51,7 @@ margin-bottom: 55px;
 display: flex;
 justify-content: center;
 align-items: center;
+text-decoration: none;
 .buttonSeta{
     margin-right: 10px;
     transform: rotatey(180deg);
